@@ -1,0 +1,17 @@
+.login_links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.login_links a {
+  font-weight: bold;
+  padding: 5px;
+  color: black;
+}
+.login_links a:hover {
+  background-color: rgb(236, 236, 236);
+}
+.login p {
+  padding: 5px;
+  color: red;
+}

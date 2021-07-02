@@ -1,0 +1,49 @@
+.post-view {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.post-view h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.post-view p {
+  font-size: 16px;
+}
+.post-view img {
+  height: 15vw;
+  width: 15vw;
+  float: left;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .post-view img {
+    height: 20vw;
+    width: 20vw;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .post-view img {
+    height: 30vw;
+    width: 30vw;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .post-view img {
+    height: 40vw;
+    width: 40vw;
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .post-view img {
+    height: 80vw;
+    width: 80vw;
+    margin-right: 2px;
+  }
+}

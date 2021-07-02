@@ -1,0 +1,12 @@
+.input {
+  height: 25px;
+  width: 220px;
+  margin: 5px;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 450px) {
+  .input {
+    width: 75vw;
+  }
+}

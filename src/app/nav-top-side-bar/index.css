@@ -1,0 +1,30 @@
+.nav-top-side-bar {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  height: 80vh;
+  width: 200px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #000;
+  flex-direction: column;
+  border-radius: 0px 0px 5px 0px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.nav-top-side-bar a {
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.nav-top-side-bar-items {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .nav-top-side-bar {
+    display: flex;
+  }
+}

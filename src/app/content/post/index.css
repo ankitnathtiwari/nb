@@ -1,0 +1,37 @@
+.post {
+  width: 40vw;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgb(235, 235, 240);
+}
+
+.post-buttons button {
+  width: 80px;
+  background-color: #fefefe;
+  color: #000;
+}
+
+.post-buttons button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.post-view-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.post-buttons {
+  display: flex;
+  margin-top: 30px;
+  width: 40vw;
+}
+@media only screen and (max-width: 600px) {
+  .post {
+    margin: 5vw auto;
+    width: 80vw;
+    border-bottom: 1px solid rgb(235, 235, 240);
+  }
+  .post-view-button {
+    width: 80vw;
+  }
+}
