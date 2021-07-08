@@ -1,0 +1,27 @@
+.delete-pop-up {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 10px;
+
+  background-color: white;
+  border: 1px solid rgb(115, 115, 115);
+  border-radius: 5px;
+}
+.delete-pop-up h2 {
+  margin: 20px;
+}
+
+.delete-pop-up p {
+  margin: 20px;
+}
+
+.delete-pop-up-buttons {
+  display: flex;
+  margin: 20px;
+}
+
+.delete-pop-up-buttons button {
+  width: 50px;
+}
