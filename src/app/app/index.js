@@ -17,6 +17,7 @@ export const App = () => {
   const [state, dispatch] = useReducer(reducer, initFun);
   useFetch(state, dispatch);
 
+  console.log(state);
   const getContent = () => {
     if (state.err) {
       return <h1>Some Error Occured...</h1>;
