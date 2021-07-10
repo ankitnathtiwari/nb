@@ -4,5 +4,6 @@
 /node_modules
 
 
-/mocks
-mockServiceWorker.js
+/src/mocks
+
+/mockServiceWorker.js
