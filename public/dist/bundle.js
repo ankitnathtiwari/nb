@@ -653,7 +653,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"prodUrl\": () => (/* binding */ prodUrl),\n/* harmony export */   \"testUrl\": () => (/* binding */ testUrl),\n/* harmony export */   \"baseUrl\": () => (/* binding */ baseUrl)\n/* harmony export */ });\nvar prodUrl = \"http://localhost:8000\";\nvar testUrl = \"http://localhost:8080\";\nvar baseUrl = testUrl;\n\n//# sourceURL=webpack://newsbird-reporter/./src/app/base-url/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"prodUrl\": () => (/* binding */ prodUrl),\n/* harmony export */   \"testUrl\": () => (/* binding */ testUrl),\n/* harmony export */   \"baseUrl\": () => (/* binding */ baseUrl)\n/* harmony export */ });\nvar prodUrl = \"http://localhost:8000\";\nvar testUrl = \"http://localhost:8080\";\nvar baseUrl = prodUrl;\n\n//# sourceURL=webpack://newsbird-reporter/./src/app/base-url/index.js?");
 
 /***/ }),
 
