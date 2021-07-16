@@ -11,7 +11,8 @@ module.exports = {
     publicPath: "/",
   },
 
-  // mode: "development",
+  devtool: "inline-source-map",
+  mode: "development",
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] },
