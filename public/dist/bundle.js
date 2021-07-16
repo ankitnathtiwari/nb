@@ -378,7 +378,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initFun\": () => (/* binding */ initFun)\n/* harmony export */ });\n/* harmony import */ var _base_url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../base-url */ \"./src/app/base-url/index.js\");\n\nvar initFun = {\n  url: \"\".concat(_base_url__WEBPACK_IMPORTED_MODULE_0__.baseUrl, \"/json_api/auth\"),\n  method: \"GET\",\n  sideNav: false,\n  loading: false,\n  initLoading: true,\n  err: false,\n  message: \"\",\n  auth: false,\n  user: \"\",\n  sendData: {}\n};\n\n//# sourceURL=webpack://newsbird-reporter/./src/app/app/initfun.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initFun\": () => (/* binding */ initFun)\n/* harmony export */ });\n/* harmony import */ var _base_url__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../base-url */ \"./src/app/base-url/index.js\");\n\nvar initFun = {\n  url: \"\".concat(_base_url__WEBPACK_IMPORTED_MODULE_0__.baseUrl, \"/json_api/auth\"),\n  method: \"GET\",\n  sideNav: false,\n  loading: false,\n  initLoading: true,\n  err: true,\n  message: \"\",\n  auth: false,\n  user: \"\",\n  sendData: {}\n};\n\n//# sourceURL=webpack://newsbird-reporter/./src/app/app/initfun.js?");
 
 /***/ }),
 

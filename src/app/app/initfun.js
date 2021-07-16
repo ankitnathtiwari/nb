@@ -6,7 +6,7 @@ export const initFun = {
   sideNav: false,
   loading: false,
   initLoading: true,
-  err: false,
+  err: true,
   message: "",
   auth: false,
   user: "",
