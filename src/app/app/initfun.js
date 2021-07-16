@@ -5,7 +5,7 @@ export const initFun = {
   method: "GET",
   sideNav: false,
   loading: false,
-  initLoading: false,
+  initLoading: true,
   err: false,
   message: "",
   auth: false,
