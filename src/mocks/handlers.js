@@ -9,7 +9,7 @@ const postUrl = `${baseUrl}/post`;
 export const handlers = [
   rest.get(`${authUrl}`, (req, res, ctx) => {
     console.log("request received");
-    return res(ctx.json({ auth: false, user: "Ankit" }));
+    return res(ctx.json({ auth: true, user: "Ankit" }));
   }),
 
   rest.post(`${authUrl}/login`, (req, res, ctx) => {

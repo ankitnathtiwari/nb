@@ -16,13 +16,12 @@ import { useFetch } from "./useFetch";
 export const App = () => {
   const [state, dispatch] = useReducer(reducer, initFun);
   useFetch(state, dispatch);
+  console.log(state.auth, "app state auth");
 
-  console.log(state);
   const getContent = () => {
     if (state.err) {
       return <h1>Some Error Occured...</h1>;
     }
-
     if (state.initLoading) {
       return <h1>Loading...</h1>;
     }

@@ -3,7 +3,7 @@ const path = require("path");
 
 module.exports = {
   //entry point
-  entry: "/src/index.js",
+  entry: "./src/index.js",
   // output point
   output: {
     path: path.join(__dirname, "public", "dist"),
@@ -11,8 +11,7 @@ module.exports = {
     publicPath: "/",
   },
 
-  devtool: "inline-source-map",
-  mode: "development",
+  mode: "production",
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] },
