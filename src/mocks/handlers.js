@@ -31,7 +31,7 @@ export const handlers = [
     return res(ctx.json(myposts));
   }),
   rest.post(`${postUrl}/create`, (req, res, ctx) => {
-    return res(ctx.json({ message: "post created" }));
+    return res(ctx.json({ postCreated: true, message: "post created" }));
   }),
 
   rest.get(`${authUrl}/logout`, (req, res, ctx) => {

@@ -1,24 +1,25 @@
-import { validateStr } from "../../shared/hooks/use-validation/index";
+import { validateStr } from "../../shared/other-func/validators/index";
 import { formData } from "../../shared/other-func/form-data/index";
+
 export const handleSubmit = (state, action) => {
   //validate
-  // if (
-  //   validateStr(state.formItems.inputs[0].value) &&
-  //   validateStr(state.formItems.textarea.value)
-  // ) {
-  //   console.log("Validation completed");
-  return {
-    ...state,
-    loading: true,
-    sendData: formData(state),
-  };
-  // } else {
-  //   // if validation failed update message.
-  //   return {
-  //     ...state,
-  //     message: "Validation Failed",
-  //   };
-  // }
+  if (
+    validateStr(state.formItems.inputs[0].value) &&
+    validateStr(state.formItems.textarea.value)
+  ) {
+    console.log("Validation completed");
+    return {
+      ...state,
+      loading: true,
+      sendData: formData(state),
+    };
+  } else {
+    // if validation failed update message.
+    return {
+      ...state,
+      message: "Validation Failed",
+    };
+  }
 };
 
 export const fetchCompleted = (state, action) => {
