@@ -19,6 +19,7 @@ const putData = (state, dispatch) => {
   })
     .then((res) => {
       if (res.data.updateStatus) {
+        console.log("post updated");
         dispatch.myPostListDispatch({
           type: "UPDATE_POST",
           payload: res.data.post,

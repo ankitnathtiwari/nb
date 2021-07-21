@@ -41,8 +41,8 @@ export const handlers = [
   rest.delete(`${postUrl}/delete`, (req, res, ctx) => {
     return res(ctx.json({ deleted: true }));
   }),
-  rest.put(`${postUrl}/edit`, (req, res, ctx) => {
-    return res(ctx.json({ edited: true }));
+  rest.put(`${postUrl}/update`, (req, res, ctx) => {
+    return res(ctx.json({ updateStatus: true, message: "post updated" }));
   }),
 
   rest.get("http://localhost:8000/image/fakeimage.jpg", async (_, res, ctx) => {

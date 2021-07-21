@@ -1,4 +1,4 @@
-import { validateStr } from "../../shared/hooks/use-validation/index";
+import { validateStr } from "../../shared/other-func/validators/index";
 import { editFormData } from "../../shared/other-func/form-data/index";
 
 export const handleSubmit = (state, action) => {
@@ -36,5 +36,13 @@ export const fetchCompleted = (state, action) => {
     initData: action.payload,
     loading: false,
     message: "Post Updated",
+  };
+};
+export const errHandler = (state, action) => {
+  //only change the form elements and message
+  return {
+    ...state,
+    loading: false,
+    message: "Some Error Occured Please Try Again",
   };
 };

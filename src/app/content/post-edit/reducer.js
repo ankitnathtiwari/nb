@@ -9,6 +9,8 @@ export const reducer = (state, action) => {
       return fetchCompleted(state, action);
     case "FORM_CHANGE":
       return formChangeHandler(state, action);
+    case "err":
+      return errHandler(state, action);
     default:
       throw new Error();
   }
