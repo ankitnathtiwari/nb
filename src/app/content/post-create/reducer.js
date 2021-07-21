@@ -1,5 +1,6 @@
 import { handleSubmit, fetchCompleted } from "./eventHandlers";
 import { formChangeHandler } from "../../shared/other-func/form-handlers/index";
+import { errHandler } from "./eventHandlers";
 
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -9,6 +10,8 @@ export const reducer = (state, action) => {
       return fetchCompleted(state, action);
     case "FORM_CHANGE":
       return formChangeHandler(state, action);
+    case "err":
+      return errHandler(state, action);
     default:
       throw new Error();
   }

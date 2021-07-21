@@ -31,3 +31,11 @@ export const fetchCompleted = (state, action) => {
     message: "post created succedd fully",
   };
 };
+export const errHandler = (state, action) => {
+  //only change the form elements and message
+  return {
+    ...state,
+    loading: false,
+    message: "Some Error Occured Please Try Again",
+  };
+};

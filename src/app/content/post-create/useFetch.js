@@ -9,9 +9,11 @@ const postData = (url, sendData, dispatch) => {
     withCredentials: true,
   })
     .then((res) => {
-      res.data.postCreated
-        ? dispatch({ type: "fetchCompleted", payload: res.data })
-        : dispatch({ type: "err" });
+      if (res.data.postCreated) {
+        dispatch({ type: "fetchCompleted", payload: res.data });
+      } else {
+        dispatch({ type: "err" });
+      }
     })
     .catch((err) => {
       dispatch({ type: "err" });
