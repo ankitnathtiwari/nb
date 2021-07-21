@@ -11,7 +11,7 @@ export const PostCreate = () => {
   const [state, dispatch] = useReducer(reducer, initFun);
 
   useFetch(state, dispatch);
-  console.log(state);
+
   return (
     <div className='post-create'>
       <Form
