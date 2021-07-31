@@ -43,7 +43,7 @@
 .nav-top-sidebar-icon {
   display: none;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .nav-top-log-reg {
     display: none;
   }

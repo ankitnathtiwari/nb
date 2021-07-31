@@ -14,9 +14,9 @@ const getData = (url, dispatch) => {
 
 export const useFetch = (state, dispatch) => {
   useEffect(() => {
-    if (state.initLoading) {
+    if (state.initLoading || state.loading) {
       getData(`${state.path}?page=${state.page}&top=${state.query}`, dispatch);
     }
     return () => {};
-  }, [state.initLoading]);
+  }, [state.initLoading, state.loading]);
 };

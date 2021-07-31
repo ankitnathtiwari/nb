@@ -5,7 +5,10 @@
   margin-bottom: 40px;
   border-bottom: 1px solid rgb(231, 231, 231);
 }
-
+.my-post-list-button button {
+  margin: auto;
+  width: 100px;
+}
 @media only screen and (max-width: 1100px) {
   .mypost-list {
     width: 50vw;

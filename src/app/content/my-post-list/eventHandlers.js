@@ -44,6 +44,13 @@ export const fetchCompleted = (state, action) => {
     ...state,
     loading: false,
     initLoading: false,
-    posts: action.payload,
+    posts: [...state.posts, ...action.payload],
+  };
+};
+export const handleLoadMore = (state, action) => {
+  return {
+    ...state,
+    page: state.page + 1,
+    loading: true,
   };
 };

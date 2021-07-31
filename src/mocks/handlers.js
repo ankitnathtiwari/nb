@@ -1,15 +1,15 @@
 import { rest } from "msw";
-import { allposts, myposts } from "./data";
+import { posts1, posts2, posts3 } from "./data";
 import fakeimage from "./images/fakeimage.jpg";
 import regeneratorRuntime from "regenerator-runtime";
 
 const baseUrl = "http://localhost:8080/json_api";
 const authUrl = `${baseUrl}/auth`;
 const postUrl = `${baseUrl}/post`;
+
 export const handlers = [
   rest.get(`${authUrl}`, (req, res, ctx) => {
-    console.log("request received");
-    return res(ctx.json({ auth: true, user: "Ankit" }));
+    return res(ctx.json({ auth: false, user: "" }));
   }),
 
   rest.post(`${authUrl}/login`, (req, res, ctx) => {
@@ -25,10 +25,28 @@ export const handlers = [
   }),
 
   rest.get(`${postUrl}/allpost`, (req, res, ctx) => {
-    return res(ctx.json(allposts));
+    if (req.url.searchParams.get("page") == 1) {
+      return res(ctx.json(posts1));
+    }
+    if (req.url.searchParams.get("page") == 2) {
+      return res(ctx.json(posts2));
+    }
+    if (req.url.searchParams.get("page") == 3) {
+      return res(ctx.json(posts3));
+    }
+    return res(ctx.json([]));
   }),
   rest.get(`${postUrl}/mypost`, (req, res, ctx) => {
-    return res(ctx.json(myposts));
+    if (req.url.searchParams.get("page") == 1) {
+      return res(ctx.json(posts1));
+    }
+    if (req.url.searchParams.get("page") == 2) {
+      return res(ctx.json(posts2));
+    }
+    if (req.url.searchParams.get("page") == 3) {
+      return res(ctx.json(posts3));
+    }
+    return res(ctx.json([]));
   }),
   rest.post(`${postUrl}/create`, (req, res, ctx) => {
     return res(ctx.json({ postCreated: true, message: "post created" }));
@@ -38,8 +56,8 @@ export const handlers = [
     return res(ctx.json({ auth: false }));
   }),
 
-  rest.delete(`${postUrl}/delete`, (req, res, ctx) => {
-    return res(ctx.json({ deleted: true }));
+  rest.post(`${postUrl}/delete`, (req, res, ctx) => {
+    return res(ctx.json({ deleteStatus: true }));
   }),
   rest.put(`${postUrl}/update`, (req, res, ctx) => {
     return res(ctx.json({ updateStatus: true, message: "post updated" }));

@@ -8,7 +8,8 @@ export const reducer = (state, action) => {
       return deleteNo(state, action);
     case "FETCH_COMPLETED":
       return fetchCompleted(state, action);
-
+    case "err":
+      return errhandler(state, action);
     default:
       throw new Error();
   }

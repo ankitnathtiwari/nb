@@ -7,7 +7,6 @@ export const handleSubmit = (state, action) => {
     validateStr(state.formItems.inputs[0].value) &&
     validateStr(state.formItems.textarea.value)
   ) {
-    console.log("Validation completed");
     return {
       ...state,
       loading: true,
@@ -28,7 +27,7 @@ export const fetchCompleted = (state, action) => {
     ...state,
     initData: action.payload,
     loading: false,
-    message: "post created succedd fully",
+    message: "Post Saved",
   };
 };
 export const errHandler = (state, action) => {

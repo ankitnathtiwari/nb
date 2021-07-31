@@ -1,32 +1,34 @@
 .post-edit {
   background-color: rgb(243, 243, 240);
   position: absolute;
-  top: 10%;
+  top: 0px;
   left: 0px;
-
+  width: 100%;
   background-color: white;
   border: 1px solid rgb(187, 186, 186);
   border-radius: 5px;
 }
 
 .post-edit input {
-  width: 90%;
+  width: 95%;
 }
 .post-edit textarea {
-  width: 90%;
+  width: 95%;
+  height: 20vh;
   font-size: 16px;
 }
 .post-edit select {
-  width: 90%;
+  width: 95%;
 }
-/* @media only screen and (max-width: 800px) {
-  .post-edit input {
-    width: 75vw;
-  }
+
+@media only screen and (max-width: 750px) {
   .post-edit textarea {
-    width: 75vw;
+    height: 30vh;
   }
-  .post-edit select {
-    width: 75vw;
+}
+
+@media only screen and (max-width: 500px) {
+  .post-edit textarea {
+    height: 60vh;
   }
-} */
+}

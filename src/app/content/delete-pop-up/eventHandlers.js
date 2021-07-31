@@ -30,3 +30,11 @@ export const fetchCompleted = (state, action) => {
     message: "Post Deleted",
   };
 };
+export const errhandler = (state, action) => {
+  return {
+    ...state,
+    loading: false,
+    err: true,
+    message: "Some Err Occured",
+  };
+};

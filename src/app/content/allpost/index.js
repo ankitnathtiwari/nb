@@ -5,6 +5,7 @@ import { useRouteMatch } from "react-router";
 import { useFetch } from "./useFetch";
 import "./index.css";
 import { PostView } from "../post-view";
+import { Button } from "../../shared/components/button";
 
 export const AllPost = () => {
   const [state, dispatch] = useReducer(reducer, initFun);
@@ -17,12 +18,21 @@ export const AllPost = () => {
       return <h3>No Post to Show</h3>;
     }
   } else {
-    return state.posts.map((post) => {
-      return (
-        <div key={post.id} className='allpost_view'>
-          <PostView post={post} />
+    return (
+      <div>
+        {state.posts.map((post) => {
+          return (
+            //      <div className='allpost_view'>
+            <PostView post={post} key={post._id} />
+            //     </div>
+          );
+        })}
+        <div className='all-post-button'>
+          <Button onClick={() => dispatch({ type: "LOAD_MORE" })}>
+            Load More
+          </Button>
         </div>
-      );
-    });
+      </div>
+    );
   }
 };
