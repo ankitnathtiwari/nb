@@ -1,24 +1,23 @@
 import axios from "axios";
 import { useEffect } from "react";
 
-const postData = (url, sendData, dispatch) => {
-  console.log(sendData);
+const postData = (state, dispatch) => {
   axios
-    .post(url, sendData, { withCredentials: true })
+    .post(state.url, state.payloadData, { withCredentials: true })
     .then((res) => {
       res.data.passwordChangeStatus
-        ? dispatch({ type: "fetchCompleted", payload: res.data })
-        : dispatch({ type: "err" });
+        ? dispatch({ type: "FETCH_COMPLETED", payload: res.data })
+        : dispatch({ type: "ERR" });
     })
     .catch((err) => {
-      dispatch({ type: "err" });
+      dispatch({ type: "ERR" });
     });
 };
 
 export const useFetch = (state, dispatch) => {
   useEffect(() => {
     if (state.loading) {
-      postData(state.url, state.sendData, dispatch);
+      postData(state, dispatch);
     }
     return () => {
       console.log("cleanup post create");

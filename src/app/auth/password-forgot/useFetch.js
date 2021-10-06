@@ -7,7 +7,7 @@ const postData = (url, sendData, dispatch) => {
     .post(url, sendData)
     .then((res) => {
       res.data.mailSentStatus
-        ? dispatch({ type: "fetchCompleted", payload: res.data })
+        ? dispatch({ type: "FETCH_COMPLETED", payload: res.data })
         : dispatch({ type: "INVALID_CRED", payload: res.data });
     })
     .catch((err) => {

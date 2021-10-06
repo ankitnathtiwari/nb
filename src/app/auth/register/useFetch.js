@@ -6,9 +6,9 @@ const postData = (url, sendData, dispatch) => {
   axios
     .post(url, sendData)
     .then((res) => {
-      res.data.regStatus
+      res.data.status
         ? dispatch({ type: "fetchCompleted", payload: res.data })
-        : dispatch({ type: "err" });
+        : dispatch({ type: "NOT_REGISTERED", payload: res.data });
     })
     .catch((err) => {
       dispatch({ type: "err" });

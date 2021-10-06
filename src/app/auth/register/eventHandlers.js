@@ -47,3 +47,9 @@ export const formHandler = (state, action) => {
     formItems: formChangeHandler(state, action),
   };
 };
+export const handleNotRegistered = (state, action) => {
+  return {
+    ...state,
+    message: action.payload.message,
+  };
+};

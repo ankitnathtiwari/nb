@@ -8,6 +8,7 @@ export const Post = ({ post }) => {
   //based on url show allpost or mypost.
 
   const match = useRouteMatch();
+  console.log("post  rendered");
   return (
     <Switch>
       <Route path={`${match.url}/mypost`}>

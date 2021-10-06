@@ -5,7 +5,7 @@ import { Redirect, Route, Switch, useRouteMatch } from "react-router";
 
 export const Postlist = () => {
   const match = useRouteMatch();
-
+  console.log(match);
   return (
     <div>
       <Switch>
