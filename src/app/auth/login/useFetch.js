@@ -9,6 +9,7 @@ const postData = (url, sendData, dispatch) => {
     withCredentials: true,
   })
     .then((res) => {
+      console.log(res, "login res");
       res.data.auth
         ? dispatch.loginDispatch({ type: "LOGGED_IN", payload: res.data })
         : dispatch.dispatch({ type: "INVALID_CRED", payload: res.data });
