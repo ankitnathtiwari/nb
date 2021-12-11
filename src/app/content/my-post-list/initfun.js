@@ -3,7 +3,7 @@ import { baseUrl, testUrl } from "../../base-url/index";
 export const initFun = {
   deletePopUp: false,
   edit: false,
-  query: "all",
+  query: "allpost",
   page: 1,
   path: `${baseUrl}/json_api/post/mypost`,
   method: "GET",

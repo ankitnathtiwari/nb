@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import { useLocation, useRouteMatch } from "react-router";
-
+import { PostView } from "../post-view";
 import "./index.css";
 
 export const Post = ({ post }) => {
@@ -18,7 +18,7 @@ export const Post = ({ post }) => {
       </Route>
       <Route path={`${match.url}/allpost`}>
         <div className='post'>
-          <AllPostView post={post} />
+          <PostView post={post} />
         </div>
       </Route>
     </Switch>

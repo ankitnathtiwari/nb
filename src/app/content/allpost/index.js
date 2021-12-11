@@ -22,9 +22,7 @@ export const AllPost = () => {
       <div>
         {state.posts.map((post) => {
           return (
-            //      <div className='allpost_view'>
             <PostView post={post} key={post._id} />
-            //     </div>
           );
         })}
         <div className='all-post-button'>

@@ -8,8 +8,8 @@ const authUrl = `${baseUrl}/auth`;
 const postUrl = `${baseUrl}/post`;
 
 export const handlers = [
-  rest.get(`${authUrl}`, (req, res, ctx) => {
-    return res(ctx.json({ auth: false, user: "" }));
+  rest.get(authUrl, (req, res, ctx) => {
+    return res(ctx.json({ auth: true, user: "Bro" }));
   }),
 
   rest.post(`${authUrl}/login`, (req, res, ctx) => {
@@ -60,10 +60,10 @@ export const handlers = [
     return res(ctx.json({ deleteStatus: true }));
   }),
   rest.put(`${postUrl}/update`, (req, res, ctx) => {
-    return res(ctx.json({ updateStatus: true, message: "post updated" }));
+    return res(ctx.json({ updateStatus: true, message: "post updated" , post:posts1[0]}));
   }),
 
-  rest.get("http://localhost:8000/image/fakeimage.jpg", async (_, res, ctx) => {
+  rest.get("http://localhost:8080/compressed-images/fakeimage.jpg", async (_, res, ctx) => {
     // Convert "base64" image to "ArrayBuffer".
     const imageBuffer = await fetch(fakeimage).then((res) => res.arrayBuffer());
     return res(

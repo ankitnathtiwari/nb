@@ -21,9 +21,7 @@ export const MyPostList = () => {
       <div>
         {state.posts.map((post) => {
           return (
-            //     <div key={post._id} className='mypost-list'>
             <Mypost key={post._id} post={post} myPostListDispatch={dispatch} />
-            //      </div>
           );
         })}
         <div className='my-post-list-button'>

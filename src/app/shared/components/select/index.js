@@ -19,8 +19,11 @@ export const Select = ({ item, dispatch }) => {
       <option value='politics'>Politcs</option>
       <option value='entertainment'>Entertainment</option>
       <option value='sports'>Sports</option>
-      <option value='scienceandtech'>Science and Technology</option>
+      <option value='business'>Business</option>
+      <option value='national'>National</option>
       <option value='international'>International</option>
+      <option value='scienceandtech'>Science and Technology</option>
+      <option value='miscellaneous'>Miscellaneous</option>
     </select>
   );
 };
