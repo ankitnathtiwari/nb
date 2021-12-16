@@ -10,4 +10,4 @@ export const s3ImageUrl = "https://nb-post-image.s3.us-east-2.amazonaws.com"
 
 
 export const imageUrl = s3ImageUrl;
-export const baseUrl = stagingUrl;
+export const baseUrl = prodReporterUrl;
