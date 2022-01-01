@@ -6,7 +6,7 @@ export const prodUrl = "http://newsbird.live";
 export const stagingUrl = "http://3.110.33.147";
 export const prodReporterUrl = "https://reporters.newsbird.live";
 export const reporterDomainStaging = "3.110.33.147";
-export const s3ImageUrl = "https://nb-post-image.s3.us-east-2.amazonaws.com"
+export const s3ImageUrl = "https://nb-post-image-mum.s3.ap-south-1.amazonaws.com"
 
 
 export const imageUrl = s3ImageUrl;
