@@ -14,14 +14,14 @@ export const PostEdit = ({ post, myPostDispatch, myPostListDispatch }) => {
   useFetch(state, { myPostListDispatch, myPostDispatch });
 
   return state.loading ? (
-    <div className='post-edit'>
+    <div className="post-edit">
       <h2>Updating....</h2>
     </div>
   ) : (
-    <div className='post-edit'>
+    <div className="post-edit">
       <Form
         formItems={state.formItems}
-        btnVal='Submit'
+        btnVal="Submit"
         dispatch={dispatch}
         submitDispatch={dispatch}
       />

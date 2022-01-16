@@ -7,22 +7,27 @@ import { initFun } from "./initfun";
 import { useRouteMatch } from "react-router";
 import { Button } from "../../shared/components/button";
 import "./index.css";
+import { baseUrl } from "../../base-url";
+
+const deleteUrl = `${baseUrl}/json_api/post/delete`;
 
 export const Mypost = ({ post, myPostListDispatch }) => {
   const [state, dispatch] = useReducer(reducer, initFun);
 
   return (
-    <div className='mypost_view'>
+    <div className="mypost_view">
       <PostView post={post} style={state.postViewStyle} />
-      <div className='mypost_view_button'>
+      <div className="mypost_view_button">
         <Button
           disabled={state.btnDisable}
-          onClick={() => dispatch({ type: "EDIT_TRUE" })}>
+          onClick={() => dispatch({ type: "EDIT_TRUE" })}
+        >
           Edit
         </Button>
         <Button
           disabled={state.btnDisable}
-          onClick={() => dispatch({ type: "DELETE_POP_UP_YES" })}>
+          onClick={() => dispatch({ type: "DELETE_POP_UP_YES" })}
+        >
           Delete
         </Button>
       </div>
@@ -31,6 +36,7 @@ export const Mypost = ({ post, myPostListDispatch }) => {
           myPostDispatch={dispatch}
           myPostListDispatch={myPostListDispatch}
           post={post}
+          deleteUrl={deleteUrl}
         />
       ) : state.edit ? (
         <PostEdit

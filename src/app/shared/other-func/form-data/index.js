@@ -17,3 +17,25 @@ export const editFormData = (state) => {
 
   return formItem;
 };
+
+export const videoFormData = (state) => {
+  const formItem = new FormData();
+  formItem.append("title", state.formItems.inputs[0].value);
+  formItem.append("description", state.formItems.textarea.value);
+  formItem.append("topics", state.formItems.multiSelect.value);
+  formItem.append("thumbnail", state.formItems.image.value);
+  formItem.append("video", state.formItems.video.value);
+
+  return formItem;
+};
+
+export const editVideoFormData = (state) => {
+  const formItem = new FormData();
+  formItem.append("title", state.formItems.inputs[0].value);
+  formItem.append("description", state.formItems.textarea.value);
+  formItem.append("topics", state.formItems.multiSelect.value);
+  formItem.append("thumbnail", state.formItems.image.value);
+  formItem.append("video", state.formItems.video.value);
+  formItem.append("_id", state.post._id);
+  return formItem;
+};

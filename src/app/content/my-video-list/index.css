@@ -1,0 +1,45 @@
+.mypost-list {
+  width: 45vw;
+  height: 600px;
+  margin-left: 100px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+.my-post-list-button button {
+  margin: auto;
+  width: 100px;
+}
+@media only screen and (max-width: 1100px) {
+  .mypost-list {
+    width: 50vw;
+    margin-left: 100px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .mypost-list {
+    width: 70vw;
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .mypost-list {
+    width: 80vw;
+    margin-left: 10px;
+    height: 680px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mypost-list {
+    margin-left: 2px;
+    width: 80vw;
+    height: 1000px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .mypost-list {
+    margin-left: 2px;
+    width: 80vw;
+    height: 1100px;
+  }
+}

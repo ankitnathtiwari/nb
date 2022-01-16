@@ -4,26 +4,35 @@ import { NavSide } from "../nav-side";
 
 import { PostCreate } from "../post-create";
 import { Postlist } from "../post-list";
+import { VideoPostCreate } from "../video-post-create";
+import { VideoPostlist } from "../video-post-list";
 import "./index.css";
 export const Content = ({ onClick }) => {
   return (
-    <div className='content' onClick={onClick}>
+    <div className="content" onClick={onClick}>
       <NavSide />
       <Switch>
-        <Route exact path='/login'>
+        <Route exact path="/login">
           <Redirect to={{ pathname: "/post", state: { updateData: false } }} />
         </Route>
-        <Route exact path='/register'>
+        <Route exact path="/register">
           <Redirect to={{ pathname: "/post", state: { updateData: false } }} />
         </Route>
-        <Route exact path='/create'>
+        <Route exact path="/create">
           <PostCreate />
         </Route>
-        <Route path='/post'>
+        <Route exact path="/createVideo">
+          <VideoPostCreate />
+        </Route>
+        <Route path="/post">
           <Postlist />
         </Route>
 
-        <Route exact path='/'>
+        <Route path="/video">
+          <VideoPostlist />
+        </Route>
+
+        <Route exact path="/">
           <Redirect to={{ pathname: "/post", state: { updateData: false } }} />
         </Route>
       </Switch>

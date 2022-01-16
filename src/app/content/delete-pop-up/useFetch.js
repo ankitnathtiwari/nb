@@ -9,7 +9,7 @@ const deleteData = (url, sendData, dispatch) => {
     withCredentials: true,
   })
     .then((res) => {
-      res.data.deleteStatus
+      res.data.deleteStatus || res.data.status
         ? dispatch({ type: "DELETE_POST", payload: sendData.id })
         : dispatch({ type: "err" });
     })

@@ -57,7 +57,55 @@ export const imageChange = (state, action) => {
   };
 };
 
+export const videoChange = (state, action) => {
+  console.log({ state, action });
+  return {
+    ...state,
+    message: "",
+    edited: true,
+    formItems: {
+      ...state.formItems,
+      video: onChangeHandler(state.formItems.video, action.payload),
+    },
+  };
+};
+
+export const selectChangeMultiple = (state, action) => {
+  if (action.payload.checked) {
+    console.log("if condition passed");
+    return {
+      ...state,
+      message: "",
+      edited: true,
+      formItems: {
+        ...state.formItems,
+        multiSelect: {
+          ...state.formItems.multiSelect,
+          value: [...state.formItems.multiSelect.value, action.payload.value],
+        },
+      },
+    };
+  } else {
+    console.log("else not ");
+    return {
+      ...state,
+      message: "",
+      edited: true,
+      formItems: {
+        ...state.formItems,
+        multiSelect: {
+          ...state.formItems.multiSelect,
+          value: state.formItems.multiSelect.value.filter(
+            (item) => item !== action.payload.value
+          ),
+        },
+      },
+    };
+  }
+};
+
 export const formChangeHandler = (state, action) => {
+  console.log({ state, action }, "forma change handler");
   switch (action.payload.formtype) {
     case "INPUT":
       return inputChange(state, action);
@@ -65,8 +113,12 @@ export const formChangeHandler = (state, action) => {
       return textareaChange(state, action);
     case "SELECT":
       return selectChange(state, action);
+    case "SELECT_MULTIPLE":
+      return selectChangeMultiple(state, action);
     case "FILE":
       return imageChange(state, action);
+    case "VIDEO_FILE":
+      return videoChange(state, action);
     default:
       throw new Error();
   }

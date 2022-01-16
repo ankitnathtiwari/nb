@@ -1,4 +1,5 @@
 export const onChangeHandler = (item, payload) => {
+  console.log("onChange handler video", { item, payload });
   item.value = payload.value;
   return item;
 };

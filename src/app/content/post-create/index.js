@@ -13,10 +13,10 @@ export const PostCreate = () => {
   useFetch(state, dispatch);
 
   return (
-    <div className='post-create'>
+    <div className="post-create">
       <Form
         formItems={state.formItems}
-        btnVal='Submit'
+        btnVal="Submit"
         dispatch={dispatch}
         submitDispatch={dispatch}
       />

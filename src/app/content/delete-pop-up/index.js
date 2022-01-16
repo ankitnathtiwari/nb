@@ -10,22 +10,23 @@ export const DeletePopup = (props) => {
   const [state, dispatch] = useReducer(reducer, { ...props }, initFun);
 
   useFetch(state, props.myPostListDispatch);
-
+  console.log({ state }, "delete popup");
   return state.loading ? (
-    <div className='delete-pop-up'>
+    <div className="delete-pop-up">
       <h2>Deleting</h2>
     </div>
   ) : (
-    <div className='delete-pop-up'>
+    <div className="delete-pop-up">
       <h2>Delete Post ?</h2>
       <p>
         This can’t be undone and it will be removed from the post list
         completely.
       </p>
-      <div className='delete-pop-up-buttons'>
+      <div className="delete-pop-up-buttons">
         <Button onClick={() => dispatch({ type: "DELETE_YES" })}>Yes</Button>
         <Button
-          onClick={() => props.myPostDispatch({ type: "DELETE_POP_UP_NO" })}>
+          onClick={() => props.myPostDispatch({ type: "DELETE_POP_UP_NO" })}
+        >
           No
         </Button>
       </div>

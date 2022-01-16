@@ -1,0 +1,41 @@
+.mypost_view {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 80px;
+  margin-left: 100px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mypost_view .post-view {
+  margin-left: 0px;
+  box-shadow: none;
+}
+.mypost_view_button {
+  display: flex;
+  padding: 10px;
+}
+
+.mypost_view_button button {
+  width: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+  .mypost_view {
+    margin: auto;
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .mypost_view {
+    margin: auto;
+    margin-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mypost_view {
+    margin: auto;
+    margin-bottom: 80px;
+  }
+}

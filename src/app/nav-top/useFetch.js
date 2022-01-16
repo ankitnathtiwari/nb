@@ -8,8 +8,8 @@ const getData = (url, dispatch) => {
     withCredentials: true,
   })
     .then((res) => {
-      console.log(res.data);
-      if (res.data.loggedOut) {
+      console.log(res.data, "afterlogout");
+      if (res.data.status) {
         dispatch.appDispatch({ type: "LOGGED_OUT" });
         dispatch.dispatch({ type: "fetchCompleted" });
       } else {
