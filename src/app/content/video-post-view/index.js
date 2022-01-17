@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { baseUrl, videoUrl, thumbnailUrl } from "../../base-url/index";
 import "./index.css";
 import ReactPlayer from "react-player";
@@ -10,16 +10,40 @@ export const VideoPostView = ({ item, style }) => {
   const [seekValue, setSeekValue] = useState(0);
   const [playValue, setPlayValue] = useState(false);
   const player = useRef();
-
+  const videoItemRef = useRef();
   const handleSeek = (e) => {
     setSeekValue(e.target.value);
     player.current.seekTo(Number(e.target.value) / 100);
   };
 
-  console.log({ seekValue });
+  useEffect(() => {
+    window.onscroll = () => {
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.8,
+      };
+      let callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            setPlayValue(false);
+          }
+        });
+      };
+      let observer = new IntersectionObserver(callback, options);
+
+      let target = videoItemRef.current;
+      if (target) {
+        observer.observe(target);
+      }
+    };
+
+    return () => {};
+  });
+
   return (
     <div className="short-video-with-desc" key={item._id}>
-      <div onClick={() => setPlayValue(!playValue)}>
+      <div onClick={() => setPlayValue(!playValue)} ref={videoItemRef}>
         <ReactPlayer
           ref={player}
           url={`${videoUrl}/${item.video}`}
