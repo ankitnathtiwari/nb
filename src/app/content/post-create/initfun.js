@@ -8,7 +8,7 @@ const formItems = {
     placeholder: "type your content here",
   },
   select: { id: "select", value: "select options" },
-  image: { id: "image", value: "" },
+  image: { id: "image", value: "", labelName: "Upload Image" },
 };
 
 export const initFun = {
