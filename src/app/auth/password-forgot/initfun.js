@@ -1,11 +1,11 @@
-import { baseUrl, testUrl } from "../../base-url/index";
+import { appConfig } from "../../app-config";
 
 export const formItems = {
   inputs: [{ id: "email", value: "", placeholder: "name" }],
 };
 
 export const initValue = {
-  url: `${baseUrl}/json_api/auth/password_forgot`,
+  url: `${appConfig.url.api}/auth/password_forgot`,
   method: "POST",
   sendData: {},
   initRender: false,

@@ -1,5 +1,3 @@
-import { baseUrl, testUrl } from "../../base-url/index";
-
 export const initFun = (initData) => {
   return {
     post: initData.post,

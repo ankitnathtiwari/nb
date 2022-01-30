@@ -6,6 +6,7 @@ export const prodUrl = "http://newsbird.live";
 export const stagingUrl = "http://65.0.18.242";
 export const prodReporterUrl = "https://reporters.newsbird.live";
 export const reporterDomainStaging = "3.110.33.147";
+
 export const s3ImageUrl =
   "https://nb-post-image-mum.s3.ap-south-1.amazonaws.com";
 export const s3VideoUrl =
@@ -32,7 +33,8 @@ export const selectTopics = [
   { value: "miscellaneous", labelName: "Miscellaneous" },
 ];
 
-export const imageUrl = prodImageUrl;
-export const baseUrl = prodReporterUrl;
-export const videoUrl = prodVideoUrl;
-export const thumbnailUrl = prodthumbnailUrl;
+export const baseUrl = localApiUrl;
+
+export const imageUrl = s3ImageUrl;
+export const videoUrl = s3VideoUrl;
+export const thumbnailUrl = s3thumbnailUrl;

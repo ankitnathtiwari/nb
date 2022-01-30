@@ -1,4 +1,4 @@
-import { baseUrl, testUrl } from "../../base-url/index";
+import { appConfig } from "../../app-config";
 
 const formItemsWithInit = (post) => {
   return {
@@ -15,7 +15,7 @@ const formItemsWithInit = (post) => {
 
 export const initFun = (initState) => {
   return {
-    url: `${baseUrl}/json_api/post/update`,
+    url: `${appConfig.url.api}/post/update`,
     post: initState.post,
     method: "PUT",
     loading: false,

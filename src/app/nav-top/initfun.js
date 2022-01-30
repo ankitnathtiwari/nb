@@ -1,7 +1,7 @@
-import { baseUrl, testUrl } from "../base-url/index";
+import { appConfig } from "../app-config";
 
 export const initFun = {
-  url: `${baseUrl}/json_api/auth/logout`,
+  url: `${appConfig.url.api}/auth/logout`,
   method: "GET",
   loading: false,
   err: false,

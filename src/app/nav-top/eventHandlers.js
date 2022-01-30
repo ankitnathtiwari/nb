@@ -1,9 +1,9 @@
-import { baseUrl, testUrl } from "../base-url/index";
+import { appConfig } from "../app-config";
 
 export const handleSubmit = (state, action) => {
   return {
     ...state,
-    url: `${baseUrl}/json_api/auth/logout`,
+    url: `${appConfig.url.api}/auth/logout`,
     method: "GET",
     loading: true,
     err: false,
@@ -28,7 +28,7 @@ export const formHandler = (state, action) => {
 };
 export const handleUnmount = (state, action) => {
   return {
-    url: `${baseUrl}/json_api/auth/logout`,
+    url: `${appConfig}/auth/logout`,
     method: "GET",
     loading: false,
     err: false,

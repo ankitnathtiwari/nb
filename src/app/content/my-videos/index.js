@@ -9,9 +9,9 @@ import { Button } from "../../shared/components/button";
 import "./index.css";
 import { VideoPostView } from "../video-post-view";
 import { VideoPostEdit } from "../video-post-edit";
-import { baseUrl } from "../../base-url";
+import { appConfig } from "../../app-config";
 
-const deleteUrl = `${baseUrl}/json_api/video/delete`;
+const deleteUrl = `${appConfig.url.api}/video/delete`;
 
 export const MyVideos = ({ post, myPostListDispatch }) => {
   const [state, dispatch] = useReducer(reducer, initFun);

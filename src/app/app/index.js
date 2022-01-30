@@ -28,14 +28,14 @@ export const App = () => {
 
     if (state.auth) {
       return (
-        <Route path='/'>
+        <Route path="/">
           <Content onClick={() => dispatch({ type: "hideSidebar" })} />
         </Route>
       );
     }
 
     return (
-      <Route path='/'>
+      <Route path="/">
         <Auth
           loginDispatch={dispatch}
           onClick={() => dispatch({ type: "hideSidebar" })}
@@ -49,7 +49,7 @@ export const App = () => {
   //if already authrized and session exists load content component else auth component
   return (
     <Router>
-      <div className='app'>
+      <div className="app">
         <NavTop
           auth={state.auth || false}
           user={state.user || false}

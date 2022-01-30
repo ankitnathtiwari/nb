@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const { envConfig, env_state } = require("./env_config/index");
 
 module.exports = {
   //entry point
@@ -10,9 +11,8 @@ module.exports = {
     filename: "bundle.js",
     publicPath: "/",
   },
+  mode: envConfig === "staging" ? env_state.PRODUCTION : envConfig,
 
-  mode: "production",
-  // mode: "development",
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] },
@@ -35,6 +35,7 @@ module.exports = {
     }),
   ],
 
+  devtool: envConfig === env_state.DEVELOPEMENT ? "source-map" : false,
   devServer: {
     historyApiFallback: true,
     contentBase: "./",

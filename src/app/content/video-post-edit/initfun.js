@@ -1,4 +1,4 @@
-import { baseUrl, testUrl } from "../../base-url/index";
+import { appConfig } from "../../app-config";
 
 const formItemsWithInit = (post) => {
   return {
@@ -18,7 +18,7 @@ export const initFun = (initState) => {
   console.log({ initState }, "init state of video edit");
 
   return {
-    url: `${baseUrl}/json_api/video/update`,
+    url: `${appConfig.url.api}/video/update`,
     post: initState.post,
     method: "PUT",
     loading: false,

@@ -1,4 +1,4 @@
-import { baseUrl, testUrl } from "../../base-url/index";
+import { appConfig } from "../../app-config";
 
 const formItems = {
   inputs: [{ id: "title", value: "", placeholder: "title" }],
@@ -12,7 +12,7 @@ const formItems = {
 };
 
 export const initFun = {
-  url: `${baseUrl}/json_api/post/create`,
+  url: `${appConfig.url.api}/post/create`,
   method: "POST",
   loading: false,
   err: false,

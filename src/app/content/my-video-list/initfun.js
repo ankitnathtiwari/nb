@@ -1,11 +1,11 @@
-import { baseUrl, testUrl } from "../../base-url/index";
+import { appConfig } from "../../app-config";
 
 export const initFun = {
   deletePopUp: false,
   edit: false,
   query: "allpost",
   page: 1,
-  path: `${baseUrl}/json_api/video/myvideo`,
+  path: `${appConfig.url.api}/video/myvideo`,
   method: "GET",
   loading: false,
   initLoading: true,

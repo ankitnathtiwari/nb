@@ -3,12 +3,13 @@ import { posts1, posts2, posts3 } from "./data";
 import fakeimage from "./images/fakeimage.jpg";
 import regeneratorRuntime from "regenerator-runtime";
 import { videoPosts1, videoPosts2, videoPosts3 } from "./videoPosts";
-const baseUrl = "http://localhost:8080/json_api";
+import { appConfig } from "../app/app-config";
+
+const baseUrl = appConfig.url.api;
 const authUrl = `${baseUrl}/auth`;
 const postUrl = `${baseUrl}/post`;
-const videoUrl = `${baseUrl}/video`;
+const videoUrl = appConfig.url.video;
 
-console.log({ videoUrl });
 export const handlers = [
   rest.get(authUrl, (req, res, ctx) => {
     return res(ctx.json({ auth: true, user: "Bro" }));

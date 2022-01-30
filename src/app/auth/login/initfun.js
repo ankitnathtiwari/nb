@@ -1,5 +1,4 @@
-import { baseUrl, testUrl } from "../../base-url/index";
-
+import { appConfig } from "../../app-config";
 // TODO: take type inside the object, to control rendering order of different types
 // e.g. input1, textarea, input2
 export const formItems = {
@@ -10,7 +9,7 @@ export const formItems = {
 };
 
 export const initFun = {
-  url: `${baseUrl}/json_api/auth/login`,
+  url: `${appConfig.url.api}/auth/login`,
   method: "POST",
   loading: false,
   err: false,

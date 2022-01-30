@@ -1,4 +1,4 @@
-import { baseUrl, testUrl } from "../../base-url/index";
+import { appConfig } from "../../app-config";
 
 export const formItems = {
   inputs: [
@@ -10,7 +10,7 @@ export const formItems = {
 };
 
 export const initFun = {
-  url: `${baseUrl}/json_api/auth/register`,
+  url: `${appConfig}/auth/register`,
   method: "POST",
   loading: false,
   err: false,

@@ -1,5 +1,4 @@
-import { baseUrl, testUrl } from "../../base-url/index";
-
+import { appConfig } from "../../app-config";
 export const formItems = {
   inputs: [
     { id: "newPassword", value: "", placeholder: "New Password" },
@@ -13,7 +12,7 @@ export const formItems = {
 
 export const initFun = {
   initData: {},
-  url: `${baseUrl}/json_api/auth/password_change`,
+  url: `${appConfig.url.api}/auth/password_change`,
   method: "POST",
   sendData: {},
   initRender: false,

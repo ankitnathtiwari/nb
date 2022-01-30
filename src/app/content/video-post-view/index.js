@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { baseUrl, videoUrl, thumbnailUrl } from "../../base-url/index";
 import "./index.css";
 import ReactPlayer from "react-player";
 import { ReactPlayerControlls } from "../react-player-control";
+import { appConfig } from "../../app-config";
 const width = "90vw";
 
 export const VideoPostView = ({ item, style }) => {
@@ -46,12 +46,12 @@ export const VideoPostView = ({ item, style }) => {
       <div onClick={() => setPlayValue(!playValue)} ref={videoItemRef}>
         <ReactPlayer
           ref={player}
-          url={`${videoUrl}/${item.video}`}
+          url={`${appConfig.url.video}/${item.video}`}
           width={width}
           controls={false}
           playing={playValue}
           volume={volume}
-          light={`${thumbnailUrl}/${item.thumbNail}`}
+          light={`${appConfig.url.thumbnail}/${item.thumbNail}`}
           className="react-player"
           onProgress={(e) => {
             setSeekValue(Number(e.played) * 100);

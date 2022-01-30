@@ -7,9 +7,9 @@ import { initFun } from "./initfun";
 import { useRouteMatch } from "react-router";
 import { Button } from "../../shared/components/button";
 import "./index.css";
-import { baseUrl } from "../../base-url";
+import { appConfig } from "../../app-config";
 
-const deleteUrl = `${baseUrl}/json_api/post/delete`;
+const deleteUrl = `${appConfig.url.api}/post/delete`;
 
 export const Mypost = ({ post, myPostListDispatch }) => {
   const [state, dispatch] = useReducer(reducer, initFun);
