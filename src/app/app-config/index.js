@@ -15,7 +15,7 @@ const config = {
     url: {
       api: "http://localhost:8000/json_api",
       video: "https://nb-test-video-mum.s3.ap-south-1.amazonaws.com",
-      image: "https://nb-post-image.s3.us-east-2.amazonaws.com",
+      image: "https://nb-test-video-mum.s3.ap-south-1.amazonaws.com",
       thumbnail: "https://nb-test-video-mum.s3.ap-south-1.amazonaws.com",
       share: "http://localhost:8080",
     },
