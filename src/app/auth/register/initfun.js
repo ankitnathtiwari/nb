@@ -10,7 +10,7 @@ export const formItems = {
 };
 
 export const initFun = {
-  url: `${appConfig}/auth/register`,
+  url: `${appConfig.url.api}/auth/register`,
   method: "POST",
   loading: false,
   err: false,

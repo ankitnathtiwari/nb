@@ -31,7 +31,6 @@ export const validateStr = (str) => {
     return false;
   } else {
     const result = str.match(pattern);
-    console.log(result);
     return result[0] === result.input;
   }
 };

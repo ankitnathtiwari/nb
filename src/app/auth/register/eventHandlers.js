@@ -5,7 +5,6 @@ export const handleSubmit = (state, action) => {
   //validate
   if (
     validateStr(state.formItems.inputs[0].value) &&
-    validateStr(state.formItems.inputs[1].value) &&
     emailValidate(state.formItems.inputs[2].value) &&
     validateStr(state.formItems.inputs[3].value)
   ) {
